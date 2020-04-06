@@ -11,14 +11,16 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	flex-flow: row wrap;
 }
 
 .container{
 	max-width: 1200px;
-	margin: 0 auto;
+	width: 90%;
 	display: flex;
 	justify-content: center;
-	align-items: center;
+	align-items: flex-start;
+	flex-flow: row wrap;
 }
 
 h1,
@@ -50,37 +52,51 @@ p {
 
 /*The widths are in a percentage!*/
 header {
-	height: 110px;
 	border-bottom: 3px solid #77a466;
 	margin: 0 auto;
+	width: 90%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	flex-flow: row wrap;
+
 }
 
 header h1 {
-	float: left;
+	font-size: 1.875em;
+	text-align: center;
 	margin: 0;
-	padding: 38px 0;
+	padding: 38px 20px 20px 20px;
+	border-bottom: 3px solid #77a466;
+	width: 100%;
+
 }
 header h1 span {
 	color: #77a466;
 }
 
 header nav {
-	float: right;
-	padding: 46px 0;
+	padding: 20px 0;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+
 }
 header nav ul {
 	margin: 0;
 	padding: 0;
+
 }
 header nav ul li {
 	text-transform: uppercase;
 	font-weight: 700;
-	font-size: 14px;
+	font-size: 1em;
 	padding: 0 10px;
-	display: inline;
+	list-style: none;
+	margin: 15px 0;
+	text-align: center;
+
+
 }
 header nav ul li a{
 	text-decoration: none;
@@ -91,15 +107,17 @@ header nav ul li a{
 .top-section,
 .bottom-section {
 	margin: 0 auto;
-	clear: both;
+	width: 90%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	flex-flow: row wrap;
+	text-align: center;
 }
 
 .main-image {
 	height: auto;
-	float: left;
+
 }
 .main-image img {
 	width: 100%;
@@ -108,25 +126,23 @@ header nav ul li a{
 
 .main-title {
 	height: auto;
-	float: left;
 }
 .main-title h3 {
-	text-align: left;
+	text-align: center;
 	padding: 5px 0;
 	color: #77a466;
 }
 .main-title p {
 	padding: 0;
 	font-size: 16px;
-	line-height: 25px;
+	line-height: 1.5625;
+	text-align: center;
 }
 
 .section-one,
 .section-two,
 .section-three {
-	width: 33%;
-	height: auto;
-	float: left;
+	width: 100%;
 	border-top: 1px solid #eee;
 }
 
@@ -169,11 +185,12 @@ footer {
 	height: 50px;
 	border-top: 3px solid #eee;
 	margin: 0 auto;
-	clear: both;
-	text-align: center;
+	width: 90%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	flex-flow: row wrap;
+
 }
 footer span {
 	font-family: 'Wisdom Script', cursive;
@@ -181,3 +198,64 @@ footer span {
 	color: #77a466;
 	font-size: 14px;
 }
+
+/*Me*/
+
+@media all and (min-width:768px) {
+    /* Tablet styles here */
+			.bottom-section {
+				display: flex;
+				justify-content: flex-start;
+				flex-flow: row nowrap;
+				align-items: flex-start;
+				}
+
+			.section-one,
+			.section-two,
+			.section-three {
+				width: 33%;
+				display: flex;
+				flex-direction: column;
+				text-align: left;
+
+			}
+		}
+
+
+
+@media all and (min-width:1200px) {
+    /* Desktop styles here */
+		.container{
+
+
+		}
+		header {
+
+			justify-content: space-between;
+		}
+		header h1 {
+			width: 30%;
+			padding: 0;
+			text-align: left;
+			border-bottom: none;
+		}
+		header nav {
+			width: 40%
+		}
+		header nav ul {
+
+			padding: 20px 0;
+			display: flex;
+			justify-content: space-between;
+
+			}
+
+	
+
+			.top-section h3, .top-section p {
+				text-align: left;
+			}
+
+
+
+		}
